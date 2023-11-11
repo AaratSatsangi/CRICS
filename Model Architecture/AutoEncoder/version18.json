@@ -1,0 +1,24 @@
+{
+    "_comment1": "The architecture needs to be in the form - {Model Name: {_LayerNumber_LayerName_: Parameters}}",
+    "_comment2": "The keys should be looked up in keys.json",
+    "_comment3": "___DENOISING AUTOENCODER WAS USED___",
+    "_comment4": "VERY SLOW TO TRAIN",
+    "noise_factor": 1,
+    "image_size": 128,
+    "channels": 3,
+    "batch_size": 32,
+    
+    "architecture": {
+        "encoder": {
+            "_1_Conv2d_": [3, 16, 130, 1, 1],
+            "_1_Dropout_": [0.3],
+            "_1_Activation_Sigmoid_": []
+        },
+
+        "decoder":{
+            "_1_BatchNorm2d_": [16],
+            "_1_ConvTranspose2d_": [16, 3, 130, 1, 1],
+            "_1_Activation_Tanh_": []
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "keys": {
+        "Conv2d": ["in_channels","out_channels","k_size","stride","padding","bias","groups","dilation"],
+        "Conv3d": ["in_channels","out_channels","k_size","stride","padding","bias","groups","dilation"],
+        "ConvTranspose2d": ["in_channels","out_channels","k_size","stride","padding","bias","out_padding","groups","dilation"],
+        "Linear": ["in_features","out_features","bias"],
+        "Unflatten": ["input_shape", "output_shape"],
+        "BatchNorm": ["num_features"],
+        "ReLU": ["inplace"],
+        "LeakyReLU": ["slope","inplace"],
+        "Softmax": ["dim"],
+        "Dropout": ["p"],
+        "Maxpool2d": ["kernel_size", "stride", "padding", "dilation", "return_indices","ceil_mode"]
+    }
+}

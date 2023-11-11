@@ -1,0 +1,13 @@
+Data/
+__pycache__/
+Training_reconstruction/
+Videos/
+.ipynb_checkpoints/
+.vscode/
+Model/AutoEncoder/Final/Saved Encodings/
+Model/AutoEncoder/ExtraFiltering/
+Arch.docx
+Dataset_videos.xlsx
+Untitled.ipynb
+Untitled1.ipynb
+upload.json

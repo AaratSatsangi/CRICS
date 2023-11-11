@@ -1,0 +1,49 @@
+{
+    "_comment1": "The architecture needs to be in the form - {Model Name: {_LayerNumber_LayerName_: Parameters}}",
+    "_comment2": "The keys should be looked up in keys.json",
+    
+    "architecture": {
+        "encoder": {
+            "_1_Conv2d_": [3, 256, 4, 2, 1],
+            "_1_Activation_LeakyReLU_": [0.2, 1],
+        
+            "_2_Conv2d_": [256, 128, 4, 2, 1],
+            "_2_Dropout2d_": [0.3],
+            "_2_Activation_LeakyReLU_": [0.2, 1],
+            
+            "_3_Conv2d_": [128, 64, 4, 2, 1],
+            "_3_Activation_LeakyReLU_": [0.2, 1],
+            
+            "_4_Conv2d_": [64, 32, 4, 2, 1],
+            "_4_BatchNorm2d_": [32],
+            "_4_Activation_LeakyReLU_": [0.2, 1],
+            
+            "_5_Conv2d_": [32, 16, 4, 2, 1],
+            "_5_Activation_LeakyReLU_": [0.2, 1],
+            
+            "_7_Flatten_": [],
+            "_7_Linear_": [1024, 1024],
+            "_7_Activation_Sigmoid_": []
+        },
+
+        "decoder":{
+            "_1_Unflatten_": [1, [16, 8, 8]],                 
+            "_2_ConvTranspose2d_": [16, 32, 4, 2, 1],
+            "_2_Activation_LeakyReLU_": [0.2, 1],
+            
+            "_3_ConvTranspose2d_": [32, 64, 4, 2, 1],
+            "_3_Activation_LeakyReLU_": [0.2, 1],
+            
+            "_4_ConvTranspose2d_": [64, 128, 4, 2, 1],
+            "_4_Activation_LeakyReLU_": [0.2, 1],
+            
+            "_5_ConvTranspose2d_": [128, 256, 4, 2, 1],
+            "_5_BatchNorm2d_": [256],
+            "_5_Dropout2d_": [0.3],
+            "_5_Activation_LeakyReLU_": [0.2, 1],
+            
+            "_6_ConvTranspose2d_": [256, 3, 4, 2, 1],
+            "_6_Activation_Tanh_": [0.2, 1]
+        }
+    }
+}

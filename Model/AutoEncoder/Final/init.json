@@ -1,0 +1,37 @@
+{
+    "Paths": {
+        "Video": {
+            "_comment": "Where the videos are saved",
+            "path": "./Videos/"
+        },
+        "Extraction": {
+            "_comment": "Where to extract the frames from videos",
+            "path": "./Data/Next Video Frames/"
+        },
+        "Train": {
+            "_comment": "To use with dataloader from videos",
+            "dataloader_path": "./Data/imgs/",
+            "save_to_path": "./Data/imgs/Train/"
+        },
+        "Model": {
+            "_comment": "The final model to use",
+            "arch_path": "./Model/Final/ae_final.json",
+            "model_path": "./Model/Final/ae_final.pt"
+        },
+        "Save": {
+            "_comment": "For saving stuff",
+            "img_reconst": "./Training_reconstruction/Final/",
+            "filtered": "./Data/filtered/",
+            "encoding": "./Model/Final/Saved Encodings/"
+        }
+    },
+    "init_constants": {
+        "EpochsToTrain": 3,
+        "StartFrom": 54
+    },
+    "currentVideoFlags": {
+        "extractionCompleted": false,
+        "trainingCompleted": false,
+        "filteringCompleted": false
+    }
+}

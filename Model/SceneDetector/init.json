@@ -1,0 +1,36 @@
+{
+    "Paths": {
+        "TrainFolder": "./Data/SceneDetector/train/",
+        "PredictFromFolder": [
+            "./Data/SceneDetector/test/",
+            "./Data/ExtraFiltering/Version 3 (B-128)/"
+        ],
+        "ModelArchFolder": "./Model Architecture/SceneDetector/",
+        "ModelSaveFolder": "./Model/SceneDetector/",
+        "SavePredictFolder": "./Data/SceneDetector/predict/"
+    },
+    "init_constants": {
+        "image_size": 128,
+        "channels": 3,
+        "batch_size": 32,
+        "lr": 0.001,
+        "workers": 4,
+        "epochsToTrain": 50,
+        "startEpoch": 0,
+        "useForPredict": 0,
+        "Labels": [
+            "Bowling",
+            "Field",
+            "Misc"
+        ],
+        "TrainValTest_Split": [
+            0.9,
+            0.1
+        ],
+        "persist": 5,
+        "Flags": {
+            "train": true,
+            "predict": true
+        }
+    }
+}

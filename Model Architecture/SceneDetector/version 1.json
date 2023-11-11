@@ -1,0 +1,103 @@
+{
+    "_comment1": "The architecture needs to be in the form - {Model Name: {_LayerNumber_LayerName_: Parameters}}",
+    "_comment2": "The keys should be looked up in keys.json",
+    "init_constants": {
+        "image_size": 128,
+        "channels": 3,
+        "batch_size": 32,
+        "lr": 0.001,
+        "workers": 4,
+        "epochsToTrain": 50,
+        "startEpoch": 52,
+        "useForPredict": 2,
+        "persist": 5,
+        "Flags": {
+            "train": false,
+            "predict": true
+        },
+        "StartEpoch": 52,
+        "EpochsToTrain": 50
+    },
+    "architecture": {
+        "scene_detector": {
+            "_1_Conv2d_": [
+                3,
+                256,
+                4,
+                2,
+                1
+            ],
+            "_2_Conv2d_": [
+                256,
+                128,
+                4,
+                2,
+                1
+            ],
+            "_2_Dropout2d_": [
+                0.3
+            ],
+            "_2_Activation_LeakyReLU_": [
+                0.2,
+                1
+            ],
+            "_3_Conv2d_": [
+                128,
+                64,
+                4,
+                2,
+                1
+            ],
+            "_4_Conv2d_": [
+                64,
+                32,
+                4,
+                2,
+                1
+            ],
+            "_4_Activation_LeakyReLU_": [
+                0.2,
+                1
+            ],
+            "_5_Conv2d_": [
+                32,
+                16,
+                4,
+                2,
+                1
+            ],
+            "_5_Flatten_": [],
+            "_6_Linear_": [
+                256,
+                128
+            ],
+            "_6_BatchNorm1d_": [
+                128
+            ],
+            "_6_Activation_LeakyReLU_": [
+                0.2,
+                1
+            ],
+            "_7_Linear_": [
+                128,
+                64
+            ],
+            "_7_Activation_LeakyReLU_": [
+                0.2,
+                1
+            ],
+            "_8_Linear_": [
+                64,
+                32
+            ],
+            "_8_Activation_LeakyReLU_": [
+                0.2,
+                1
+            ],
+            "_9_Linear_": [
+                32,
+                3
+            ]
+        }
+    }
+}
